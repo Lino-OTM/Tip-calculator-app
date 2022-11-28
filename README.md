@@ -6,7 +6,7 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 ![](/design/desktop-preview.jpg)
 
-Link: 
+Link: https://zingy-croquembouche-8b3f19.netlify.app/
 
 ### Built with:
 
