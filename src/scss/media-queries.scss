@@ -1,0 +1,55 @@
+.hero {
+  margin: 9.1rem 0 6.4rem ;
+}
+
+.main-container {
+  display: flex;
+  gap: 3rem;
+  max-width: 92rem;
+  padding: 3.2rem 2.8rem;
+}
+
+.calculator-section {
+  margin: 1.7rem;
+
+  &__bill-input {
+    padding: 1rem 1.7rem;
+    margin-bottom: 4.2rem;
+  }
+
+  &__btns {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 4.4rem;
+  }
+
+  &__people-amount-input {
+    padding: 1rem 1.7rem;
+  }
+
+  &__people-icon {
+    top: 35rem;
+  }
+}
+
+.result-section {
+  width: 114%;
+  padding: 4.2rem 4rem 2.8rem;
+  margin: 0;
+
+  &__tip-amount-value,
+  &__total-amount-value {
+    font-size: 4.7rem;
+  }
+
+  &__tip-amount-wrapper {
+    margin-bottom: 2.6rem;
+  }
+  &__tip-amount,
+  &__total-amount {
+    font-size: 1.6rem;
+  }
+  &__reset-btn {
+    margin-bottom: 1.6rem;
+    border-radius: 0.5rem;
+  }
+}

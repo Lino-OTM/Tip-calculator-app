@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="./scss/style.scss" />
+    <link
+      rel="stylesheet"
+      href="./scss/media-queries.scss"
+      media="(min-width: 850px)"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <h1 class="hero__title">SPLI <br />TTER</h1>
+    </header>
+
+    <main class="main-container">
+      <section class="calculator-section">
+        <div class="calculator-section__form">
+          <label class="calculator-section__bill-title" for="bill-input"
+            >Bill</label
+          >
+          <img
+            class="calculator-section__dollar-icon"
+            src="./assets/images/icon-dollar.svg"
+            alt="dollar sign"
+          />
+          <input
+            class="calculator-section__bill-input"
+            type="text"
+            id="bill-input"
+            placeholder="0"
+          />
+
+          <fieldset class="calculator-section__btns">
+            <legend class="calculator-section__btns-title">Select Tip %</legend>
+            <button class="calculator-section__btn">5%</button>
+            <button class="calculator-section__btn">10%</button>
+            <button class="calculator-section__btn">15%</button>
+            <button class="calculator-section__btn">25%</button>
+            <button class="calculator-section__btn">50%</button>
+            <input
+              class="calculator-section__custom-amount"
+              type="text"
+              placeholder="Custom"
+            />
+          </fieldset>
+
+          <div class="calculator-section__people-amount-title-wrapper">
+            <label
+              class="calculator-section__people-amount-title"
+              for="people-amount"
+              >Number of People</label
+            >
+            <p class="calculator-section__people-amount-error">Can't be zero</p>
+          </div>
+          <img
+            class="calculator-section__people-icon"
+            src="./assets/images/icon-person.svg"
+            alt="person icon"
+          />
+          <input
+            class="calculator-section__people-amount-input"
+            type="text"
+            id="people-amount"
+            placeholder="0"
+          />
+        </div>
+      </section>
+
+      <section class="result-section">
+        <div class="result-section__tip-amount-wrapper">
+          <p class="result-section__tip-amount">
+            Tip Amount<br /><span class="result-section__tip-amount-person"
+              >/ person</span
+            >
+          </p>
+          <p class="result-section__tip-amount-value">$0.00</p>
+        </div>
+
+        <div class="result-section__total-amount-wrapper">
+          <p class="result-section__total-amount">
+            Total<br /><span class="result-section__total-amount-person"
+              >/ person</span
+            >
+          </p>
+          <p class="result-section__total-amount-value">$0.00</p>
+        </div>
+
+        <button class="result-section__reset-btn">RESET</button>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Ivan</a>.
+    </footer>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

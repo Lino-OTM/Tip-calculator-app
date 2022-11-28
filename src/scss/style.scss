@@ -1,0 +1,258 @@
+@import "./variables";
+@import "../../node_modules/normalize.css/normalize.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: $font;
+}
+
+body {
+  background-color: $lightGrayishCyan;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero {
+  margin: 2.5rem 0 1.7rem;
+  font-size: 1.1rem;
+  line-height: 3.6rem;
+  letter-spacing: 1.1rem;
+
+  &__title {
+    margin-left: 1.1rem;
+    color: $veryDarkCyan;
+    text-align: center;
+  }
+}
+
+.main-container {
+  background-color: $white;
+  border-radius: 1.5rem;
+  padding: 3.7rem 0;
+  border-radius: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.calculator-section {
+  margin: 0 3.2rem 3.05rem;
+  &__form {
+    position: relative;
+  }
+
+  &__bill-title {
+    font-size: 1.6rem;
+    color: $darkGrayishCyan;
+    margin-bottom: 0.9rem;
+    display: block;
+  }
+
+  &__dollar-icon {
+    width: 1.1rem;
+    position: absolute;
+    top: 4.2rem;
+    left: 1.9rem;
+  }
+
+  &__bill-input {
+    background-color: $veryLightGrayishCyan;
+    padding: 1rem 1.7rem;
+    text-align: end;
+    font-size: 2.4rem;
+    border-radius: 1rem;
+    margin-bottom: 3.3rem;
+    width: 100%;
+    color: $veryDarkCyan;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &::placeholder {
+      color: $grayishCyan;
+    }
+
+    &:focus {
+      outline: 3px solid $strongCyan;
+    }
+  }
+
+  &__btns {
+    margin: 0 0 3.55rem;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+
+    &-title {
+      font-size: 1.57rem;
+      color: $darkGrayishCyan;
+      margin-bottom: 1.8rem;
+    }
+  }
+
+  &__btn {
+    background-color: $veryDarkCyan;
+    color: $white;
+    font-size: 2.5rem;
+    border: 0;
+    border-radius: 0.7rem;
+    padding: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $veryDarkCyan;
+      background-color: #9fe8df;
+    }
+  }
+
+  .selected-btn {
+    color: $veryDarkCyan;
+    background-color: $strongCyan;
+  }
+
+  &__custom-amount {
+    text-align: end;
+    cursor: pointer;
+    padding-right: 2rem;
+    font-size: 2.4rem;
+    border: none;
+    background-color: $veryLightGrayishCyan;
+    border-radius: 0.8rem;
+    width: 100%;
+    outline: none;
+    color: $veryDarkCyan;
+
+    &::placeholder {
+      color: $darkGrayishCyan;
+    }
+
+    &:focus {
+      outline: 2px solid $strongCyan;
+    }
+  }
+
+  &__people-amount-title {
+    font-size: 1.58rem;
+    margin-bottom: 0.9rem;
+    display: block;
+    color: $darkGrayishCyan;
+  }
+
+  &__people-amount-title-wrapper {
+    position: relative;
+  }
+
+  &__people-amount-error {
+    position: absolute;
+    top: -1.2rem;
+    right: 0.5rem;
+    font-size: 1.3rem;
+    color: rgb(255, 134, 134);
+    opacity: 0;
+  }
+
+  &__people-amount-input {
+    width: 100%;
+    border: none;
+    text-align: end;
+    background-color: $veryLightGrayishCyan;
+    padding: 1rem 1.7rem;
+    font-size: 2.5rem;
+    border-radius: 1rem;
+    color: $veryDarkCyan;
+
+    &::placeholder {
+      color: $grayishCyan;
+    }
+
+    &:focus {
+      outline: 2px solid $strongCyan;
+    }
+  }
+
+  .input-error {
+    outline: 2px solid rgb(255, 134, 134);
+  }
+
+  &__people-icon {
+    position: absolute;
+    top: 39.7rem;
+    left: 1.7rem;
+  }
+}
+
+.result-section {
+  background-color: $veryDarkCyan;
+  border-radius: 1.7rem;
+  padding: 2.65rem 2.5rem;
+  margin: 0 2.5rem 0 2.4rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  &__tip-amount-wrapper,
+  &__total-amount-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__total-amount-wrapper {
+    margin-bottom: 2.3rem;
+  }
+
+  &__tip-amount,
+  &__total-amount {
+    font-size: 1.57rem;
+    color: $white;
+
+    &-person {
+      font-size: 1.3rem;
+      color: $grayishCyan;
+    }
+  }
+  &__tip-amount-value,
+  &__total-amount-value {
+    color: $strongCyan;
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  &__reset-btn {
+    margin-top: 2.2rem;
+    border: 0;
+    font-size: 1.9rem;
+    width: 100%;
+    padding: 1.3rem;
+    background-color: $strongCyan;
+    color: $veryDarkCyan;
+    border-radius: 0.8rem;
+    margin-top: auto;
+    align-self: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #9fe8df;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: $veryDarkCyan;
+}
+
+@media (max-width: 849px) {
+  .main-container {
+    max-width: 400px;
+  }
+}
